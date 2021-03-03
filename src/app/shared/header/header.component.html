@@ -1,0 +1,309 @@
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" routerLink="">
+      <img src="assets/images/logo.png" alt="FreJunHR" width="180px" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <!-- <li class="nav-item" data-toggle="collapse"
+          data-target=".navbar-collapse.show">
+          <a class="nav-link" routerLink="" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">Home</a>
+        </li> -->
+        <!-- <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <a class="nav-link" routerLink="/download/" routerLinkActive="active">Downloads</a>
+          </li> -->
+        <li  class="nav-item dropdown margin-right48px">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Features
+          </a>
+          <div class="dropdown-menu">
+            <a routerLink = "/calling">Calling</a>
+            <a routerLink = "/call-scheduling">Call Scheduling</a>
+            <a routerLink = "/sms-screening">SMS Screening</a>
+          </div>
+        </li>
+        <!--<li class="nav-item margin-right48px" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" routerLink="/pricing" routerLinkActive="active">APIs</a>
+        </li>
+        <li class="nav-item margin-right48px" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" routerLink="/pricing" routerLinkActive="active">Partners</a>
+        </li>-->
+        <li class="nav-item margin-right48px" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" routerLink="/pricing" routerLinkActive="active">Pricing</a>
+        </li>
+        <!-- <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" routerLink="integrations" routerLinkActive="active">Integrations</a>
+        </li>-->
+       <!---<li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" routerLink="/product" routerLinkActive="active">Product</a>
+        </li>-->
+        <!--<li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" href="https://frejunhelp.crisp.help/en/" target="_blank"
+            routerLinkActive="active">Support</a>
+        </li>
+        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" href="https://product.frejun.com/login" target="_blank">Login</a>
+        </li> -->
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+            aria-expanded="false">Use cases</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="https://frejun.com/sales/" target="_blank">Sales</a>
+            <a class="dropdown-item" href="https://frejun.com/teams/" target="_blank">Teams</a>
+            <a class="dropdown-item" href="https://frejun.com/consultants/" target="_blank">Consultants</a>
+            <a class="dropdown-item" href="https://frejun.com/recruiters/" target="_blank">Recruiters</a>
+          </div>
+        </li> -->
+        <!-- <li class="nav-item" data-toggle="collapse"
+          data-target=".navbar-collapse.show">
+          <a class="nav-link" routerLink="/faq/" routerLinkActive="active">FAQs</a>
+        </li> -->
+        <!-- <li class="nav-item" data-toggle="collapse"
+          data-target=".navbar-collapse.show">
+          <a class="nav-link" routerLinkActive="active"
+            href="https://www.frejun.com/blog/" target="_blank">Blog</a>
+        </li> -->
+
+        <li class="nav-item">
+          <a class="btn login" href="https://product.hr.frejun.com/login" target="_blank">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn signup" href="https://product.hr.frejun.com/signup" target="_blank">Sign Up</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="btn" href="https://product.frejun.com/signup" target="_blank">Sign up</a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="btn btn-border-green" href="https://product.frejun.com/login" target="_blank">Login</a>
+        </li> -->
+
+        <!-- <li class="nav-item" *ngIf="succuess == false" data-toggle="collapse"
+          data-target=".navbar-collapse.show">
+          <a class="nav-link" href="https://product.frejun.com/login"
+            target="_blank"
+            routerLinkActive="active">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="succuess == true">
+          <a class="nav-link" (click)="logout()" routerLinkActive="active">Logout</a>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+
+
+<!-- Signup Modal -->
+<div class="modal fade login-signup" id="signupModal" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          <img src="assets/images/ic-login.svg" alt="signup" /> Sign up
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <img src="assets/images/ic-close.svg" alt="close" />
+        </button>
+      </div>
+      <div class="modal-body">
+        <form name="form" (ngSubmit)="g.form.valid && sigup()" #g="ngForm" novalidate>
+          <div class="form-group">
+            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Firstname"
+              [(ngModel)]="registermodel.firstname" #firstname="ngModel" required />
+            <span *ngIf="g.submitted && !firstname.valid" class="field_error">Firstname is required</span>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Lastname"
+              [(ngModel)]="registermodel.lastname" #lastname="ngModel" required />
+            <span *ngIf="g.submitted && !lastname.valid" class="field_error">Lastname is required</span>
+          </div>
+          <div class="form-group">
+            <!-- <input type="email" class="form-control" id="email" placeholder="Email"> -->
+            <input type="text" class="form-control" name="email" [(ngModel)]="registermodel.email"
+              pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" #email="ngModel" required />
+            <span *ngIf="g.submitted && !email.valid && registermodel.email == ''" class="field_error">Email is
+              required</span>
+            <span *ngIf="g.submitted && !email.valid && email.errors?.pattern" class="field_error">Email invalid</span>
+          </div>
+          <div class="form-group">
+            <!-- <input type="password" class="form-control" id="pwd" placeholder="Password"> -->
+            <input class="form-control" type="password" id="pwd" name="password" placeholder="Password"
+              [(ngModel)]="registermodel.password" pattern=".{8,}" #password="ngModel" required />
+            <span *ngIf="
+                g.submitted && !password.valid && registermodel.password == ''
+              " class="field_error">Password is required</span>
+            <span *ngIf="g.submitted && !password.valid && password.errors?.pattern" class="field_error">Length should
+              be min 8 char</span>
+            <span *ngIf="g.submitted && submitSuccess == false" class="field_error">{{ errorMessage }}</span>
+          </div>
+
+          <div class="form-group">
+            <ng-container *ngIf="submitSuccess == true; else elsesigndefaultimage">
+              <button data-dismiss="modal" aria-label="Close" type="submit" class="btn">
+                Sign up
+              </button>
+            </ng-container>
+            <ng-template #elsesigndefaultimage>
+              <button type="submit" class="btn">Sign up</button>
+            </ng-template>
+          </div>
+        </form>
+
+        <div class="social-logins">
+          <div class="row">
+            <div class="col-md-6 col-12">
+              <button type="button" class="btn btn-white">
+                <img src="assets/images/ic-gplus.svg" alt="Google" /> Google login
+              </button>
+            </div>
+            <div class="col-md-6 col-12">
+              <button type="button" class="btn btn-white">
+                <img src="assets/images/ic-windows.svg" alt="Microsoft" /> Microsoft
+                login
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="form-group font">
+          <p>
+            <input type="checkbox" name="terms" required /> I accept the Terms
+            and Conditions
+          </p>
+        </div>
+        <!-- <div class="form-group">
+          <a href="#"> Forgot Password? </a>
+        </div> -->
+      </div>
+      <div class="modal-footer">
+        <p>Already have an account? <a href="#"> Login </a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Login Modal -->
+<div class="modal fade login-signup" id="loginModal" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          <img src="assets/images/ic-login.svg" alt="Login" /> Login
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <img src="assets/images/ic-close.svg" alt="close" />
+        </button>
+      </div>
+      <div class="modal-body">
+        <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="model.email"
+              placeholder="Username" #email="ngModel" required />
+            <span *ngIf="f.submitted && !email.valid" class="field_error">Email is required</span>
+          </div>
+          <div class="form-group">
+            <input type="password" name="password" placeholder="Password" pattern=".{8,}" #password="ngModel"
+              [(ngModel)]="model.password" class="form-control" required />
+            <span *ngIf="f.submitted && !password.valid && model.password == ''" class="field_error">Password is
+              required</span>
+            <span *ngIf="f.submitted && !password.valid && password.errors?.pattern" class="field_error">length should
+              be min 8 char</span>
+          </div>
+          <div class="form-group">
+            <ng-container *ngIf="succuess == true; else elsedefaultimage">
+              <button data-dismiss="modal" aria-label="Close" type="submit" class="btn">
+                Login
+              </button>
+            </ng-container>
+            <ng-template #elsedefaultimage>
+              <button type="submit" class="btn">Login</button>
+            </ng-template>
+          </div>
+          <!-- <div class="form-group"> 
+              <button data-dismiss="modal" aria-label="Close" type="submit" class="btn">Login</button>
+            </div> -->
+        </form>
+
+        <div class="social-logins">
+          <div class="row">
+            <div class="col-md-6 col-12">
+              <button type="button" class="btn btn-white">
+                <img src="assets/images/ic-gplus.svg" alt="Google" /> Google login
+              </button>
+            </div>
+            <div class="col-md-6 col-12">
+              <button type="button" class="btn btn-white">
+                <img src="assets/images/ic-windows.svg" alt="Microsoft" /> Microsoft
+                login
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="form-group">
+            <a href="#"> Forgot Password? </a>
+          </div> -->
+      </div>
+      <div class="modal-footer">
+        <p>
+          Do not have account?
+          <a href="https://docs.google.com/forms/d/1KfPsFGrEY9ZaRFjJSqD42TICPPsX6zcZoyNLK5biMIc/edit" target="_blank">
+            Sign up
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Video Modal -->
+<div class="modal fade video-modal" id="videoModal" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" style="cursor: pointer;" aria-label="Close"
+        (click)="cleanSRC()">
+        <img src="assets/images/ic-close.svg" alt="close" />
+      </button>
+      <!-- <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"
+          aria-label="Close" (click)="cleanSRC()">
+          <img src="assets/images/ic-close.svg" alt="">
+        </button>
+      </div> -->
+      <div class="modal-body cbody">
+        <div class="embed-responsive embed-responsive-16by9">
+          <!-- <video controls=”true”>
+                <source src="assets/video/sample.mp4" type=”video/mp4″ />
+                </video> -->
+          <!-- <video width="320" height="240" controls>
+                    <source src="movie.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                  </video> -->
+          <!-- <video class="embed-responsive-item" controls>
+                      <source src="https://youtu.be/tfplQvPIlzY">
+                  </video> -->
+          <!-- <iframe class="youtube-video" class="ivid" width="700" height="600"
+            frameborder="0" webkitallowfullscreen
+            mozallowfullscreen allowfullscreen
+            src="https://frejun.hippovideo.io/video/play/ppQYLVsO-utmZ0EC89hEf76B4RYJz_XQlRGDZHde8-8?utm_source=hv-campaigns&hreferer=private&%20Watch%20Video"
+            frameborder="0"
+            allowfullscreen allow="autoplay; encrypted-media"></iframe> -->
+          <iframe width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          <!-- <iframe width="420" height="315" src="https://www.youtube.com/watch?v=tfplQvPIlzY&feature=youtu.be" frameborder="0" allowfullscreen></iframe> -->
+          <!-- <iframe class="embed-responsive-item" autoStart="false" autoplay="false" src="assets/video/sample.mp4"  ></iframe> -->
+        </div>
+      </div>
+      <!-- <div class="modal-footer">          
+        
+      </div> -->
+    </div>
+  </div>
+  </div>
+

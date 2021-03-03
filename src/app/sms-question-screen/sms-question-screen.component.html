@@ -1,0 +1,330 @@
+<div class="loading_overlay" *ngIf="loading">
+  <img src="../../assets/images/Loading.gif" alt="" />
+</div>
+<div *ngIf="expiredLink == true">
+  <div
+    class="text-center"
+    style="
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    "
+  >
+    <div class="expire-screen">
+      <img
+        src="../../assets/images/undraw_page_not_found.svg"
+        alt=""
+        class="expire-screen-img"
+      /><br />
+      <p style="color: rgb(128, 132, 136); font-size: 14px; margin-top: 15px">
+        This screening link has been expired
+      </p>
+    </div>
+  </div>
+</div>
+<div
+  *ngIf="!loading"
+  class="sms-screen"
+  style="background-color: #f7f7f7; overflow-y: auto"
+>
+  <!-- <div class="sms-screen" style="background-color: #f7f7f7; overflow-y: auto"> -->
+  <div class="container">
+    <div class="step1" id="step1" *ngIf="step == 1">
+      <!-- <div class="step1" id="step1"> -->
+      <div class="">
+        <div class="bg-white p-1">
+          <div style="overflow-y: auto; height: 70vh">
+            <h6 class="m-3 text-center jd-title">
+              Job opening for
+              <span class="txt-grn">{{ questionnaire_data.job_title }}</span>
+            </h6>
+
+            <div class="job-details m-5">
+              <h5>Experience:</h5>
+              <p
+                class="job-description"
+                style="word-wrap: break-word; white-space: pre-line"
+              >
+                {{ questionnaire_data.experience }} Years
+              </p>
+
+              <h5>Location:</h5>
+              <p
+                class="job-description"
+                style="word-wrap: break-word; white-space: pre-line"
+              >
+                {{ questionnaire_data.locations }}
+              </p>
+
+              <h5>Key Skills:</h5>
+              <p
+                class="job-description"
+                style="word-wrap: break-word; white-space: pre-line"
+              >
+                {{ questionnaire_data.key_skills }}
+
+                <!-- Google Analytics; Internet Marketing; Google AdWords; Digital
+                Marketing; Pay Per Click -->
+              </p>
+
+              <h5>Job Description:</h5>
+              <p
+                class="job-description"
+                style="word-wrap: break-word; white-space: pre-line"
+              >
+                {{ questionnaire_data.job_description }}
+                <!-- {{questionnaire_data.job_description}} -->
+                <!-- {{jd}} -->
+              </p>
+            </div>
+          </div>
+          <div class="mt-5 pb-3 text-center">
+            <button
+              class="btn"
+              (click)="step = 3; sendstatus(4)"
+              disabled="{{ expired }}"
+            >
+              I am interested
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="step2" id="step2" *ngIf="step == 2">
+      <!-- <div class="" id="step2"> -->
+      <div class="">
+        <!-- <h4 class="text-left pl-1 pt-5 pb-2">
+          Screening for the position of
+          <span class="txt-grn">
+            {{ questionnaire_data.job_title }}
+          </span>
+          at <span class="txt-grn">{{ questionnaire_data.company }}</span>
+        </h4> -->
+        <div
+          class="bg-white p-1"
+          style="
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <div class="row thank-screen">
+            <!-- <div class="col-4"></div> -->
+            <div class="col-12 text-center">
+              <h5 class="que screening_ttl">Screening Form Submitted!</h5>
+              <img
+                src="../../assets/images/review-screening.svg"
+                alt=""
+                class="thank-screen-img"
+                style="margin-left: auto; margin-right: auto; display: block"
+                srcset=""
+              />
+              <br />
+
+              <p style="color: rgb(128, 132, 136)">
+                Your screening form has been submitted successfully. <br />If
+                shortlisted, the recruiter will get in touch with you.
+              </p>
+            </div>
+
+            <!-- <div class="col-4"></div> -->
+            <!-- <img src="../../assets/images/review-screening.svg" alt=""  srcset=""> -->
+          </div>
+
+          <!-- <div class="mt-5 pb-5 text-center">
+                            <button class="btn btn-primary proceed" (click)="step=3">
+                                Proceed
+                            </button>
+                        </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="step3" id="step3" *ngIf="step == 3">
+      <!-- <div class="step3" id="step3"> -->
+      <div class="">
+        <!-- <h4 class="text-left pl-1 pt-5 pb-2">
+          Screening for the position of
+          <span class="txt-grn"
+            >job title {{ questionnaire_data.job_title }}</span
+          >
+          at
+          <span class="txt-grn"
+            >xyz company {{ questionnaire_data.company }}</span
+          >
+        </h4> -->
+        <div class="bg-white p-1">
+          <div
+            class="question-block"
+            style="
+              height: calc(100vh - 180px);
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              flex-direction: column;
+              padding-top: 150px;
+            "
+          >
+            <form action="" #ref="ngForm">
+              <!-- <p class="que">{{questions[userIndex].question}}</p> -->
+              <div class="que">
+                <p class="questiondata">
+                  {{ questionnaire_data["questions"][userIndex].description }}
+                </p>
+                <div *ngIf="showmsg == true">
+                  <small>Please select atleast one option</small>
+                </div>
+                <div *ngIf="selectopts == true">
+                  <small>Please select atleast {{ selectcount }} options</small>
+                </div>
+              </div>
+
+              <div class="opt">
+                <ng-container
+                  *ngIf="
+                    questionnaire_data['questions'][userIndex].type ==
+                      'Yes or No Option';
+                    then thenTemplate;
+                    else elseTemplate
+                  "
+                >
+                </ng-container>
+                <ng-template #thenTemplate class="">
+                  <div class="">
+                    <!-- <div class="col-sm-4 col-md-4 col-lg-4"></div> -->
+                    <div class="">
+                      <div
+                        class=""
+                        *ngFor="
+                          let option of questionnaire_data['questions'][
+                            userIndex
+                          ].options;
+                          let i = index
+                        "
+                      >
+                        <!-- <mat-radio-group name="choice" ngModel>
+                          <div (click)="changeshowmsg(refc)">
+                            <mat-radio-button
+                              value="{{ option.choice }}"
+                              (click)="changeshowmsg()"
+                            >
+                              <span (click)="$event.stopPropagation()">
+                                {{ option.choice }}
+                              </span>
+                            </mat-radio-button>
+                          </div>
+                        </mat-radio-group> -->
+
+                        <div
+                          class="radio-toolbar"
+                          (click)="changeshowmsg(refc)"
+                        >
+                          <input
+                            ngModel
+                            type="radio"
+                            id="{{ option.choice }}"
+                            name="choice"
+                            value="{{ option.choice }}"
+                            (click)="changeshowmsg()"
+                          />
+                          <label for="{{ option.choice }}">
+                            <span (click)="$event.stopPropagation()">
+                              {{ option.choice }}
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="col-sm-4 col-md-4 col-lg-4"></div> -->
+                  </div>
+                </ng-template>
+                <ng-template #elseTemplate>
+                  <div class="row">
+                    <!-- <div class="col-sm-4 col-md-4 col-lg-4"></div> -->
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <div
+                        class=""
+                        *ngFor="
+                          let option of questionnaire_data['questions'][
+                            userIndex
+                          ].options
+                        "
+                      >
+                        <!-- <mat-checkbox
+                          name="{{ option.choice }}"
+                          #ref
+                          (click)="showselectopts(ref)"
+                          ngModel
+                        >
+                          <button
+                            class="btn"
+                            (click)="$event.stopPropagation()"
+                          >
+                            {{ option.choice }}
+                          </button>
+                        </mat-checkbox> -->
+
+                        <div class="radio-toolbar">
+                          <input
+                            name="{{ option.choice }}"
+                            #ref
+                            (click)="showselectopts(ref)"
+                            ngModel
+                            type="checkbox"
+                            id="{{ option.choice }}"
+                          />
+                          <label for="{{ option.choice }}">
+                            <span (click)="$event.stopPropagation()">
+                              {{ option.choice }}
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="col-sm-4 col-md-4 col-lg-4"></div> -->
+                  </div>
+                </ng-template>
+              </div>
+            </form>
+            <div class="mt-3 pb-3 proceed-btn text-center">
+              <button
+                class="btn proceed"
+                type="submit"
+                (click)="
+                  submit(
+                    ref.value,
+                    questionnaire_data['questions'][userIndex].id,
+                    userIndex,
+                    questionnaire_data['questions'][userIndex].type
+                  )
+                "
+              >
+                Next
+              </button>
+            </div>
+          </div>
+          <!-- <div class="row" style="align-self: end">
+            <div class="col-4"></div>
+            <div class="col-4 text-center">
+              <span class="ques-count">
+                {{ userIndex + 1 }} out of {{ questions_length }}
+              </span>
+            </div>
+            <div class="col-4"></div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="powerby">
+    <div>
+      <p>Powered By</p>
+      <span>
+        <a href="https://hr.frejun.com/" target="_blank"
+          ><img src="/assets/images/FreJun_new_bottom.png" width="100px"
+        /></a>
+      </span>
+    </div>
+  </div> -->
+</div>

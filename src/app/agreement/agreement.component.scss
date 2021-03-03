@@ -1,0 +1,158 @@
+@import "./../../assets/css/variable.scss";
+@import "./../../assets/css/color.scss";
+
+.agreement{
+    padding-top: 70px;
+    padding-bottom: 100px;
+    @media (max-width: 991px){
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+    @media (max-width: 575px){
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.agreement_heading{
+    width:100%; 
+    text-align: center;
+    
+}
+.agreement_heading h2{
+    font-size: 30px;
+    margin-bottom: 50px;
+    font-family: "NHaasGroteskTXPro-Bd";
+    @media (max-width: 991px){
+        font-size: 30px;
+    }
+    @media (max-width: 991px){
+        margin-bottom: 35px;
+    }
+}
+.agreement-part {
+    border-right: 4px solid silver;
+    height: 100px;
+    @media (max-width: 767px){
+        border-bottom: 3px solid silver;
+        height: auto;
+        padding-bottom: 15px;
+        display: inline-block;
+        border-right: none;
+    }
+}
+.agreement-part ul{
+    list-style-type: none;
+    margin-bottom:0;
+    padding-left:0;
+    li{
+        text-decoration: none;
+        a{
+            font-size: 18px;
+            color: #000;
+            transition:0.5s all;
+            display: inline-block;
+            margin-bottom: 10px;
+            @media (max-width: 991px){
+                font-size: 14px;
+            }
+        }
+    }
+}
+.agreement-part ul li a:hover{
+    color: #01be3f;
+    text-decoration: none;
+}
+.agreement-part ul li .active{
+    color: #01be3f;  
+}
+
+.agreement_title {
+    @media (max-width: 767px){
+        margin-top: 50px;
+    }
+    @media (max-width: 767px){
+        margin-top: 30px;
+    }
+    h3{
+    font-size: 22px;
+    font-family: "NHaasGroteskTXPro-Bd";
+    @media (max-width: 991px){
+        font-size: 20px;
+    }
+    @media (max-width: 575px){
+        font-size: 17px;
+    }
+    }
+    p{
+        font-size: 15px;
+        margin-top: 20px;
+        margin-bottom: 0;
+        text-align: justify;width: 100%;
+        display: inline-block;
+        @media (max-width: 991px){
+            font-size: 12px;
+        }
+    }
+    span{
+        font-size: 15px;
+        margin-top: 20px;
+        font-weight: bold;
+        display: inline-block;
+        text-align: justify;
+        @media (max-width: 991px){
+            font-size: 12px;
+        }
+    }
+    small{font-weight: bold; 
+        font-size: 15px; 
+        text-align: justify;
+        @media (max-width: 991px){
+            font-size: 12px;
+        }
+    }
+}
+.agreement_sub_content{
+    p{
+        font-size: 15px;
+        margin-top: 20px;
+        margin-left: 12px;
+        float: left;
+        width:97%;
+        @media (max-width: 991px){
+            font-size: 12px;
+        }
+    }
+    small{
+        font-size: 15px;
+        font-weight: bold;
+        @media (max-width: 991px){
+            font-size: 12px;
+        }
+    }                     
+}
+
+.agreement_sub_parts {
+    float: left;
+    width: 94%;
+    margin-left: 40px;
+    text-align: justify;
+    @media (max-width: 991px){
+        font-size: 12px;
+    }
+    @media (max-width: 575px){
+        width:88%;
+    }
+    p{
+        margin-top: 20px;
+        margin-left: 0px; 
+        @media (max-width: 991px){
+            font-size: 12px;
+        }
+    }
+}
+
+.g-link{
+    color:#01be3f;
+}
+.g-link:hover{ text-decoration: none; }

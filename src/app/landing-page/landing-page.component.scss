@@ -1,0 +1,163 @@
+@import "./../../assets/css/variable.scss";
+@import "./../../assets/css/color.scss";
+
+/* Home Page Banner */
+
+
+/* How It Works Section */
+.how_it_work{
+    margin-top: 100px;
+    margin-bottom: 40px;
+    h2{
+        margin-bottom: 50px;
+        font-family: $font-normal-nhaas-pro-bold;
+        font-size: 24px;
+        color: $black;        
+    }
+    .image_content{              
+        margin-top: 50px;
+        margin-bottom: 50px;
+        float: left;
+        position: absolute;
+        @media (max-width: 575px) {
+                position: relative;
+                width: 100%;
+                text-align: center;
+        }
+    }
+    .text_content{
+        padding-left: 200px;        
+        margin-top: 50px;
+        margin-bottom: 50px;
+        @media (max-width: 575px) {
+            padding-left: 0px;
+            text-align: center;
+        }
+        h2{            
+            margin: 10px 0px;
+            font-size: 36px;       
+        }
+        h4{
+            font-family: $font-normal-nhaas-pro-bold;
+            font-size: 18px;
+            color: $black;            
+        }
+        p{
+            font-family: $font-normal-nhaas-pro;
+            font-size: 16px;
+            line-height: 28px;
+            color: $black;       
+            padding-top: 10px;     
+        }
+    }
+}
+
+/* Worklife Section */
+.worklife-sec{
+    padding-bottom: 100px;
+    @media (max-width: 575px) {
+        text-align: center;
+    }
+    h2{
+        font-family: $font-normal-nhaas-pro-bold;
+        font-size: 24px;
+        text-align: center;
+    }
+    .work-head-img{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        img{
+            width: 100%;
+        }
+    }
+    .work-content{
+        margin-top: 25px;
+        margin-bottom: 25px;
+        display: flex;
+        @media (max-width: 575px) {           
+            display: block;
+        }
+        .work-icon{
+            width: auto;
+            float: left;
+            // display: flex;
+            align-items: center;
+            @media (max-width: 575px) {
+                float: none;
+                text-align: center;
+                width: 100%;
+                margin-bottom: 10px;
+                display: block;
+            }
+            img{
+                width: 26px;
+                height: 26px;
+            }
+        }
+        .work-text{
+            padding-left: 20px;
+            p{
+                font-family: $font-normal-nhaas-pro;
+                font-size: 16px;
+                line-height: 28px;
+                padding-top: 10px;
+            }
+            @media (max-width: 575px) {
+                float: none;
+                text-align: center;
+                width: 100%;
+                padding-left: 0;
+            }
+        }
+    }
+    
+}
+.Pmargin{
+    font-size: 14px  !important;
+}
+
+.side-image {
+    margin-top: 38px;
+    .img-fluid.right-image{
+        max-width: 75%;
+    }
+    @media (max-width: 991px){
+        .img-fluid.right-image {
+            max-width: 100%;
+        }   
+    }
+}
+.left-side-image {
+	display: inline-block;
+	width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    .img-fluid.left-image {
+        max-width: 64%;
+        }
+        @media (max-width: 991px){
+            .img-fluid.left-image {
+                max-width: 100%;display: none;
+            }   
+        }
+}
+.left-side-images {
+	display: inline-block;
+	width: 100%;
+    text-align: center;
+    margin-top: 50px;display:none;
+    .img-fluid.left-images {
+        max-width: 64%;
+        }
+}
+@media (max-width: 991px){
+    .left-side-images{
+        display: block;
+    .img-fluid.left-images {
+        max-width: 100%;
+    }
+}   
+}
+.g-link{ color:#01be3f;}
+.g-link:hover{ text-decoration: none; }
+ 

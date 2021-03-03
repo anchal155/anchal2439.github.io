@@ -1,0 +1,314 @@
+@import "../../assets/css/variable.scss";
+
+
+
+html,body{
+    overflow: hidden;
+}
+/*plan section */
+
+.plan-section {
+
+    .heading-container {
+        h3 {
+            margin-top: 60px;
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 37px;
+            text-align: center;
+            font-family:  "Neue Haas Grotesk Text Pro";
+            text-align: center;
+        }
+
+        p {
+            margin-top:24px;
+            font-size: 16px;
+            font-family: "Neue Haas Grotesk Text Pro";
+            line-height: 20px;
+            color: #2D2D2D;
+            text-align: center;
+        }
+    }
+}
+
+/*Tab- section */
+
+.tab-section {
+    h4 {
+        color: #3B3B3B;
+        font-size:14px;
+        font-weight: normal;
+        font-family: "Neue Haas Grotesk Text Pro";
+        line-height: 25px;
+        text-align: center;
+        margin-top:20px;
+    }
+}
+
+.nav {
+    justify-content: center;
+}
+
+.rounded-nav {
+    @media (min-width:576px) {
+        border-radius: 50rem!important;
+        
+    }
+
+    .nav-link {
+        width: 231px;
+        height:26px;
+        padding-bottom: 32px;
+        background:#FFFFFF;
+        color:#C5C5C5;
+        @media (min-width:576px) {
+            border-radius: 50rem!important;
+        }
+
+    }
+
+    .nav-item {
+        .active {
+            background:#34CB65;
+            color: #fff;
+        }
+    }
+}
+
+
+.tab-content {
+
+    .card{
+        width:327px;
+        height:697px;
+        background: #fff;
+        border:1px solid #E0E0E0;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 4.23358px;
+
+        @media (max-width:767.99px) {
+            width:300px;
+        }
+
+        .card-body {
+            .card-title {
+                 font-size: 24px;
+                 font-family: Neue Haas Grotesk Text Pro;
+                 font-weight: bold;
+                 line-height: 30px;
+                 color:#34CB65;
+                 text-align: center;
+            }
+
+            .card-text {
+                font-size:36px;
+                font-weight: bold;
+                font-family: Neue Haas Grotesk Text Pro;
+                line-height: 45px;
+                text-align: center;
+            }
+
+            h6 {
+                font-family: Neue Haas Grotesk Text Pro;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 20px;
+                color:#2D2D2D;
+                text-align: center;
+            }
+
+            hr {
+                width:252px;
+                margin-top:40px;
+            }
+
+            .details {
+                margin-top:42px;
+
+                li {
+                    list-style-type: none;
+                    margin-bottom:25px;
+                    &:before {
+                    content: url("/src/assets/images/new-content-images/tick\ Icon.png");
+                    font-family: "Roboto";
+                    font-size: 16px;
+                    font-weight: normal;
+                    line-height: 19px;
+                    text-align: center;
+                    margin-right:20px;
+                    
+                    }
+                }
+
+                #list-cross{
+                    list-style-type: none;
+    
+                    &:before {
+                        content: url("/src/assets/images/new-content-images/cross\ icon.png");
+                    }
+                }
+
+            }
+
+            p {
+                text-align: center;
+                margin-top:32px;
+                a {
+                    display: inline-block;
+                    background: #34CB65;
+                    color: white;
+                    padding-top:9px;
+                    border-radius:5px;
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: normal;
+                    font-family: "Neue Haas Grotesk Text Pro";
+                    border-color: #34CB65;
+                    text-align: center;
+                    width:198px;
+                    height:36px;    
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    
+}
+
+/*tab-section ends */
+
+/*feature section starts */
+
+.features {
+    background: #F7F9F8;
+
+    @media(max-width:767.99px) {
+        margin-righT:-17px;
+    }
+
+    h4 {
+        padding-top: 60px;
+        font-weight: bold;
+        font-size: 30px;
+        text-align: center;
+        font-family: "Neue Haas Grotesk Text Pro";
+    }
+
+    table {
+        margin-top:56px;
+            border: 1px solid #E0E0E0;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            background: #fff;
+            margin-bottom:0px;
+        thead {
+            border-bottom: 1px solid #E0E0E0;
+            tr {
+                display: flex;
+                justify-content: space-around;
+                margin-left: 167px;
+                margin-bottom:20px;
+                padding-top:15px;
+
+                @media(max-width:767.99px) {
+                    margin-lefT:125px;
+                    margin-bottom:0px;
+                }
+                th {
+                    font-family: Neue Haas Grotesk Text Pro;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 25px;
+                    color:#34CB65;
+                    border-top: none;
+                    border-bottom:none;
+
+                    @media(max-width:367.99px){
+                        font-size:14px;
+                    }
+                }
+            }
+        }
+
+        td {
+            border-top: none;
+        }
+
+        tbody {
+            tr {
+               background: none; 
+
+                .heading{
+                    font-size: 18px;
+                    font-weight: normal;
+                    font-family: "Neue Haas Grotesk Text Pro";
+                    line-height: 22px;
+                    color: #34CB65;
+                    position: relative;
+                    left:46px;
+                    top:32px;
+
+                    @media(max-width:767.99px) {
+                        left:0px;
+                        
+                    }
+                }
+            }
+
+            .table-bordered {
+                margin-left:43px;
+                width: 1000px;
+
+                @media(max-width:767.99px) {
+                    width:239px;
+                    margin-left:26px;
+                }
+                tbody{
+                    tr {
+                        td {
+                            text-align: center;
+                        
+                        }
+
+                        .row-heading {
+                            text-align: left;
+                            width: 166px;
+
+                            @media(max-width:767.99px) {
+                                width:100px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*feature section ends */
+
+/*accordion section */
+.faq-sec{
+    padding-top: 60px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+
+    h4 {
+        margin-top:60px;
+        font-weight: bold;
+        font-size:30px;
+        line-height: 38px;
+        text-align: center;
+    }
+
+    #accordion-faq {
+        margin-top:63px;
+    }
+
+}
+
+

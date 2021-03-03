@@ -1,0 +1,692 @@
+@import "./../../assets/css/variable.scss";
+@import "./../../assets/css/color.scss";
+
+/*.center {
+  text-align: center;
+}
+.product-main {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -95px;
+    left: 0;
+    background: #fffeea;
+    width: 100%;
+    height: 500px;
+    z-index: -1;
+  }
+
+  .product-hero {
+    padding: 60px 160px;
+
+    @media screen and (max-width: 1200px) {
+      padding: 60px 90px;
+    }
+    @media screen and (max-width: 991px) {
+      padding: 60px 0px;
+    }
+    @media screen and (max-width: 991px) {
+      padding: 60px 15px;
+    }
+    @media screen and (max-width: 400px) {
+      padding: 20px 15px 60px 15px;
+    }
+
+    h1 {
+      font-family: "NHaasGroteskTXPro-Bd";
+      font-size: 30px;
+      color: #000;
+      text-align: center;
+      line-height: 1.5;
+      padding-bottom: 15px;
+
+      @media screen and (max-width: 991px) {
+        padding: 0 50px 15px 50px;
+      }
+      @media screen and (max-width: 767px) {
+        padding: 0 0 15px 0;
+        font-size: 24px;
+      }
+      @media screen and (max-width: 575px) {
+        font-size: 20px;
+      }
+    }
+    p {
+      font-family: "NHaasGroteskTXPro-Rg";
+      font-size: 16px;
+      line-height: 1.63;
+      letter-spacing: normal;
+      text-align: center;
+      color: #000000;
+      padding: 0 90px 15px 90px;
+
+      @media screen and (max-width: 767px) {
+        padding: 0;
+      }
+      @media screen and (max-width: 575px) {
+        font-size: 14px;
+      }
+    }
+    .prdct-btn-wrap {
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+
+      .prduct-demo-btn {
+        border-radius: 5px;
+        padding: 14px 18px;
+        background-color: #01be3f;
+        color: #fff;
+        font-family: "NHaasGroteskTXPro-Rg";
+        font-size: 14px;
+        font-weight: 600;
+        display: inline-block;
+        transition: 0.3s all;
+        border: 1px solid #01be3f;
+
+        @media screen and (max-width: 575px) {
+          font-size: 13px;
+        }
+
+        &:hover {
+          text-decoration: none !important;
+          background: transparent;
+          color: #01be3f;
+        }
+      }
+    }
+  }
+}
+
+// pricing info section
+
+.pricing-info {
+  display: block;
+  width: 100%;
+  padding: 150px 0 60px 0;
+
+  .pricing-inner-box {
+    background: #f8f8f8;
+    padding: 0px 15px;
+
+    .box-content {
+      .single-box-content-wrap {
+        border-left: 2px solid #ededed;
+        padding: 30px 15px;
+        .single-box-content {
+          h5 {
+            font-family: "NHaasGroteskTXPro-Bd";
+            font-size: 18px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.56;
+            letter-spacing: normal;
+            text-align: center;
+            color: #000000;
+          }
+
+          p {
+            font-family: "NHaasGroteskTXPro-Rg";
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.71;
+            letter-spacing: normal;
+            text-align: center;
+            color: #000000;
+            margin: 0;
+            display: inline-block;
+            padding-bottom: 35px;
+            min-height: 90px;
+            width: 100%;
+          }
+
+          .single-box-btn-wrap {
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            padding-bottom: 15px;
+
+            .box-content-btn {
+              background-color: #01be3f;
+              border: 1px solid #01be3f;
+              padding: 10px 20px;
+              color: #fff;
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 1.14;
+              letter-spacing: normal;
+              text-align: center;
+              transition: 0.3s all ease-in-out;
+              text-decoration: none;
+              border-radius: 5px;
+              display: inline-block;
+
+              &:hover {
+                background: transparent;
+                color: #01be3f;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .pricing-inner-wrap {
+    h2 {
+      font-family: "NHaasGroteskTXPro-Bd";
+      font-size: 18px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.56;
+      letter-spacing: normal;
+      text-align: left;
+      color: #000000;
+      padding: 30px 0 15px 0;
+      margin-bottom: 0;
+    }
+
+    .schedule-table {
+      background: #f8f8f8;
+      table-layout: fixed;
+      margin-bottom: 0px;
+
+      td {
+        border-top: none;
+        border-bottom: 2px solid #ededed;
+      }
+      .feature-heading {
+        width: 370px !important;
+        max-width: 100%;
+        @media screen and (max-width: 555px) {
+          width: 40% !important;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .borderright {
+    border-right: 2px solid #ededed;
+  }
+}
+
+/* Gaurantee Text Section */
+/*.gaurantee-text-sec {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  h2 {
+    font-family: $font-normal-nhaas-pro-bold;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  p {
+    font-family: $font-normal-nhaas-pro;
+    font-size: 16px;
+    text-align: left;
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+}
+.card-body {
+  a.btn {
+    border-radius: 3px;
+    background: #01be3f;
+    color: #fff;
+    font-size: 12px;
+    padding: 8px 30px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    &:hover {
+      border: solid 1px #01be3f;
+      background: transparent;
+      color: #01be3f;
+    }
+  }
+}
+
+.recruitment-section {
+  padding: 70px 0 120px 0;
+
+  @media screen and (max-width: 575px) {
+    padding: 40px 0 30px 0;
+  }
+  .recruitment-content {
+    .section-title {
+      padding: 0 260px;
+      text-align: center;
+
+      @media screen and (max-width: 1200px) {
+        padding: 0 150px;
+      }
+      @media screen and (max-width: 991px) {
+        padding: 0;
+      }
+
+      h1 {
+        font-family: NHaasGroteskTXPro-Bd;
+        font-size: 24px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.46;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000000;
+        display: block;
+        margin: 0;
+        padding-bottom: 60px;
+
+        @media screen and (max-width: 575px) {
+          font-size: 20px;
+          padding-bottom: 30px;
+        }
+      }
+    }
+
+    .recruitment-pills {
+      display: inline-block;
+      position: relative;
+      padding-bottom: 0;
+      width: 100%;
+      border-bottom: 2px solid #d5d5d5;
+      margin-bottom: 10px;
+
+      @media screen and (max-width: 575px) {
+        margin-bottom: 10px;
+      }
+
+      .nav-item {
+        display: inline-block;
+        width: 33.333333333333%;
+        text-align: center;
+        position: relative;
+        .active {
+          border-bottom: 4px solid #08bf31;
+          border-radius: 0px !important;
+          margin-bottom: -2px;
+        }
+        .nav-link {
+          display: inline-block;
+          text-align: center;
+          opacity: 0.6;
+          // font-family: "NHaasGroteskTXPro-Rg";
+          font-size: 18px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.56;
+          letter-spacing: normal;
+          text-align: center;
+          color: #000000;
+
+          width: 100%;
+          text-align: center;
+          padding-bottom: 15px;
+          position: relative;
+
+          @media screen and (max-width: 991px) {
+            font-size: 16px;
+          }
+          @media screen and (max-width: 575px) {
+            font-size: 14px;
+          }
+          @media screen and (max-width: 400px) {
+            font-size: 12px;
+          }
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .recruitment-pills .nav-link.active {
+    font-family: "NHaasGroteskTXPro-Bd";
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    background-color: transparent;
+    display: block;
+    opacity: 1 !important;
+
+    @media screen and (max-width: 991px) {
+      font-size: 16px;
+    }
+  }
+} */
+
+@import "../../assets/css/variable.scss";
+
+
+
+html,body{
+    overflow: hidden;
+}
+/*plan section */
+
+.plan-section {
+
+    .heading-container {
+        h3 {
+            margin-top: 60px;
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 37px;
+            text-align: center;
+            font-family:$font-normal-nhaas-pro-bold;
+            text-align: center;
+        }
+
+        p {
+            margin-top:24px;
+            font-size: 16px;
+            font-family:$font-normal-nhaas-pro-bold;
+            line-height: 20px;
+            color: #2D2D2D;
+            text-align: center;
+        }
+    }
+}
+
+/*Tab- section */
+
+.tab-section {
+    h4 {
+        color: #3B3B3B;
+        font-size:14px;
+        font-weight: normal;
+        font-family: $font-normal-nhaas-pro-bold;
+        line-height: 25px;
+        text-align: center;
+        margin-top:20px;
+    }
+}
+
+.nav {
+    justify-content: center;
+}
+
+.rounded-nav {
+    @media (min-width:576px) {
+        border-radius: 50rem!important;
+        
+    }
+
+    .nav-link {
+        width: 231px;
+        height:26px;
+        padding-bottom: 32px;
+        background:#FFFFFF;
+        color:#C5C5C5;
+        @media (min-width:576px) {
+            border-radius: 50rem!important;
+        }
+
+    }
+
+    .nav-item {
+        .active {
+            background:#34CB65;
+            color: #fff;
+        }
+    }
+}
+
+
+.tab-content {
+
+    .card{
+        width:327px;
+        height:697px;
+        background: #fff;
+        border:1px solid #E0E0E0;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 4.23358px;
+
+        @media (max-width:767.99px) {
+            width:300px;
+        }
+
+        .card-body {
+            .card-title {
+                 font-size: 24px;
+                 font-family: $font-normal-nhaas-pro-bold;
+                 font-weight: bold;
+                 line-height: 30px;
+                 color:#34CB65;
+                 text-align: center;
+            }
+
+            .card-text {
+                font-size:36px;
+                font-weight: bold;
+                font-family: $font-normal-nhaas-pro;
+                line-height: 45px;
+                text-align: center;
+            }
+
+            h6 {
+                font-family:$font-normal-nhaas-pro-bold;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 20px;
+                color:#2D2D2D;
+                text-align: center;
+            }
+
+            hr {
+                width:252px;
+                margin-top:40px;
+            }
+
+            .details {
+                margin-top:42px;
+
+                li {
+                    list-style-type: none;
+                    margin-bottom:25px;
+                    &:before {
+                    content: url("/src/assets/images/new-content-images/tick\ Icon.png");
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-size: 16px;
+                    font-weight: normal;
+                    line-height: 19px;
+                    text-align: center;
+                    margin-right:20px;
+                    
+                    }
+                }
+
+                #list-cross{
+                    list-style-type: none;
+    
+                    &:before {
+                        content: url("/src/assets/images/new-content-images/cross\ icon.png");
+                    }
+                }
+
+            }
+
+            p {
+                text-align: center;
+                margin-top:32px;
+                a {
+                    display: inline-block;
+                    background: #34CB65;
+                    color: white;
+                    padding-top:9px;
+                    border-radius:5px;
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: normal;
+                    font-family:$font-normal-nhaas-pro;
+                    border-color: #34CB65;
+                    text-align: center;
+                    width:198px;
+                    height:36px;    
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    
+}
+
+/*tab-section ends */
+
+/*feature section starts */
+
+.features {
+    background: #F7F9F8;
+    height:1590px;
+
+    @media(max-width:767.99px) {
+        margin-righT:-17px;
+        height:1829px;
+    }
+
+    h4 {
+        padding-top: 60px;
+        font-weight: bold;
+        font-size: 30px;
+        text-align: center;
+        font-family: $font-normal-nhaas-pro-bold;
+    }
+
+    table {
+        margin-top:56px;
+            border: 1px solid #E0E0E0;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            background: #fff;
+            margin-bottom:0px;
+        thead {
+            border-bottom: 1px solid #E0E0E0;
+            tr {
+                display: flex;
+                justify-content: space-around;
+                margin-left: 167px;
+                margin-bottom:20px;
+                padding-top:15px;
+
+                @media(max-width:767.99px) {
+                    margin-lefT:125px;
+                    margin-bottom:0px;
+                }
+                th {
+                    font-family:$font-normal-nhaas-pro;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 25px;
+                    color:#34CB65;
+                    border-top: none;
+                    border-bottom:none;
+
+                    @media(max-width:367.99px){
+                        font-size:14px;
+                    }
+                }
+            }
+        }
+
+        td {
+            border-top: none;
+        }
+
+        tbody {
+            tr {
+               background: none; 
+
+                .heading{
+                    font-size: 18px;
+                    font-weight: normal;
+                    font-family: $font-normal-nhaas-pro;
+                    line-height: 22px;
+                    color: #34CB65;
+                    position: relative;
+                    left:46px;
+                    top:32px;
+
+                    @media(max-width:767.99px) {
+                        left:0px;
+                        
+                    }
+                }
+            }
+
+            .table-bordered {
+                margin-left:43px;
+                width: 1000px;
+
+                @media(max-width:767.99px) {
+                    width:311px;
+                    margin-left:26px;
+                }
+                tbody{
+                    tr {
+                        td {
+                            text-align: center;
+                        
+                        }
+
+                        .row-heading {
+                            text-align: left;
+                            width: 186px;
+
+                            @media(max-width:767.99px) {
+                                width:100px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*feature section ends */
+
+/*accordion section */
+.faq-sec{
+    padding-top: 60px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+
+    h4 {
+        margin-top:60px;
+        font-weight: bold;
+        font-size:30px;
+        line-height: 38px;
+        text-align: center;
+    }
+
+    #accordion-faq {
+        margin-top:63px;
+    }
+
+}
+
+
+

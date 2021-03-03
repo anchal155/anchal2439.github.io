@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="135.403" height="138.4" viewBox="0 0 135.403 138.4">
+  <g id="_02" data-name="02" transform="translate(1.4 1.4)">
+    <ellipse id="Oval_Copy_4" data-name="Oval Copy 4" cx="61.81" cy="62.177" rx="61.81" ry="62.177" transform="translate(6.286 11.944)" fill="#f8e71c"/>
+    <g id="Group_19" data-name="Group 19">
+      <ellipse id="Oval" cx="43.302" cy="43.559" rx="43.302" ry="43.559" transform="translate(0 0)" stroke="#01be3f" stroke-miterlimit="10" stroke-width="2.8"/>
+      <path id="Path_16" data-name="Path 16" d="M0,12.043S5.194,39.057,5.194,27.851,2.758,17.7,12.422,17.174,57.37,0,42.7,0,15.179,11.57,18.633,5.785,17.553,0,17.553,0H11.343S7.123,3.737,5.194,5.785,0,12.043,0,12.043Z" transform="translate(7.683 9.133)" fill="#fff"/>
+      <path id="Path_17" data-name="Path 17" d="M2.867,11.027c7.1,5.621,10.6.56,10.5-3.584S16.505-4.43,17.992,3.3s2.388,5.621,7.179,7.728-1.494,2.81,4.791,11.241,0,16.862,0,16.862S15.6,33.509,9.474,27.537-4.232,5.406,2.867,11.027Z" transform="translate(4.26 46.584)" fill="#fff"/>
+      <path id="Path_18" data-name="Path 18" d="M13.29,0S-4.43,12.325,1.477,12.325,5.9,27.893,13.29,27.893,23.8,48.144,27.482,40.415s3.677-12.522,3.677-12.522l-3.677-12.48-6.1-10.38Z" transform="translate(54.047 9.467)" fill="#fff"/>
+    </g>
+    <g id="Group_15" data-name="Group 15" transform="translate(17.46 42.154)">
+      <rect id="Rectangle" width="104.063" height="74.472" rx="5.6" fill="#01be3f"/>
+      <rect id="Rectangle-2" data-name="Rectangle" width="88" height="5.621" rx="2.81" transform="translate(9.079 40.046)" fill="#c5f400" opacity="0.3"/>
+      <rect id="Rectangle_Copy_6" data-name="Rectangle Copy 6" width="88" height="5.621" rx="2.81" transform="translate(9.079 49.179)" fill="#c5f400" opacity="0.3"/>
+      <rect id="Rectangle_Copy_14" data-name="Rectangle Copy 14" width="88" height="5.621" rx="2.81" transform="translate(9.079 58.313)" fill="#c5f400" opacity="0.3"/>
+    </g>
+    <path id="Path_19" data-name="Path 19" d="M5.523,0a5.6,5.6,0,0,0-2.73,10.49L50.7,37.236l51.13-26.671A5.6,5.6,0,0,0,99.244,0Z" transform="translate(17.46 42.154)" fill="#c5f400"/>
+    <path id="Path_Copy_30" data-name="Path Copy 30" d="M0,0,6.271-4.224,11.554-.033l6.378-4.224L23.8-.068" transform="matrix(0.788, -0.616, 0.616, 0.788, 112.929, 105.146)" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3.024"/>
+    <path id="Combined_Shape_Copy_14" data-name="Combined Shape Copy 14" d="M11.174,22.482a11.068,11.068,0,0,1-7.9-3.292,11.288,11.288,0,0,1,0-15.9,11.128,11.128,0,0,1,15.8,0,11.289,11.289,0,0,1,0,15.9A11.068,11.068,0,0,1,11.174,22.482Zm.1-19.386A8.176,8.176,0,1,0,19.4,11.272,8.161,8.161,0,0,0,11.274,3.1Z" transform="matrix(-0.848, 0.53, -0.53, -0.848, 119.53, 21.209)" fill="#01be3f"/>
+    <ellipse id="Oval-2" data-name="Oval" cx="17.46" cy="17.564" rx="17.46" ry="17.564" transform="translate(75.429 101.872)"/>
+    <g id="Group_16" data-name="Group 16" transform="matrix(0.588, -0.809, 0.809, 0.588, 82.367, 127.686)">
+      <g id="Group_18" data-name="Group 18" transform="translate(0.688 0.021)">
+        <g id="Rectangle-3" data-name="Rectangle" transform="translate(0)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.4">
+          <rect width="16.063" height="9.133" rx="4.55" stroke="none"/>
+          <rect x="0.7" y="0.7" width="14.663" height="7.733" rx="3.85" fill="none"/>
+        </g>
+        <g id="Rectangle_Copy_13" data-name="Rectangle Copy 13" transform="translate(7.96 0.102)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.4">
+          <rect width="16.063" height="9.133" rx="4.55" stroke="none"/>
+          <rect x="0.7" y="0.7" width="14.663" height="7.733" rx="3.85" fill="none"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

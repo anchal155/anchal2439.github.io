@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/* Color css */
+
+/* Main color variable name */
+
+    $white: #fff;    
+    $green: #01be3f;
+    $black: #000;
+    $light-yellow: #f9ffd9;
+    $footer-border: #2D2D2D;
+    $pricing-bg: #F7F7F7;
+body {
+    background-color: $white;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: $font-normal-nhaas-pro;
+}

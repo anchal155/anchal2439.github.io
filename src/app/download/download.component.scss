@@ -1,0 +1,14 @@
+@import "./../../assets/css/variable.scss";
+@import "./../../assets/css/color.scss";
+
+.download-section{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    h2{        
+        font-family: $font-normal-nhaas-pro-bold;
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
